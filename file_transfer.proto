@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package FilePackage;
+
+service FileTransfer {
+  rpc SendFile(stream FileChunk) returns (stream FileChunk);
+}
+
+message FileChunk {
+  string filename = 1;
+  bytes chunk = 2;
+}
+
+message FileTransferResponse {
+  string message = 1;
+}

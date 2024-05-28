@@ -1,0 +1,7 @@
+#install
+npm install express body-parser multer cors
+
+#Then run server
+node index.js
+
+#localhost:5000
