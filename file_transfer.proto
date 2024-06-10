@@ -4,6 +4,7 @@ package FilePackage;
 
 service FileTransfer {
   rpc SendFile(stream FileChunk) returns (stream FileChunk);
+  rpc DownloadChunk(DownloadChunkRequest) returns (stream FileChunk);
 }
 
 message FileChunk {
@@ -13,4 +14,8 @@ message FileChunk {
 
 message FileTransferResponse {
   string message = 1;
+}
+
+message DownloadChunkRequest {
+  string filename = 1;
 }

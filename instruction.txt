@@ -1,5 +1,5 @@
 #install
-npm install express body-parser multer cors
+npm install express body-parser multer cors axios zlib
 
 #Then run server
 node index.js
